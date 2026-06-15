@@ -1,0 +1,52 @@
+task_name: claude_cotton_expense_reconciliation
+
+difficulty: hard
+
+l1_category: Operations & QA
+l2_category: Document/Receipt Processing
+
+persona: Claude Cotton
+
+modalities:
+  - image
+  - csv
+  - json
+  - text
+
+apis:
+  - fintrack-api
+  - calendar-api
+  - whatsapp-api
+
+goal:
+  Review a receipt, reconcile expense records, identify authoritative records,
+  detect duplicates, match the expense to the correct calendar event,
+  and provide a concise reconciliation summary.
+
+expected_failure_rate: 0.40
+
+traps:
+  - duplicate_transaction_detection
+  - calendar_event_disambiguation
+  - cross_document_reconciliation
+  - irrelevant_artifact_distraction
+  - receipt_authority_resolution
+
+ground_truth_file: GTFA.md
+
+rubric_file: rubric.json
+
+authoritative_sources:
+  - receipt_riverbend_diner_2026_05_08.jpg
+  - transactions.csv
+  - expense_summary.json
+  - calendar_events.csv
+
+distractor_folder:
+  - Irrelevant/
+
+output_type:
+  - reconciliation_summary
+
+notification_target:
+  - Linda Cotton
