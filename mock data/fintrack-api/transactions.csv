@@ -1,0 +1,4 @@
+transaction_id,date,merchant,category,amount,payment_method,status
+TXN001,2026-05-08,Riverbend Diner,Dining,42.75,Visa,posted
+TXN002,2026-05-04,Fresh Market,Groceries,83.42,Mastercard,posted
+TXN003,2026-05-01,Shell Fuel,Transportation,51.19,Visa,posted
